@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Shopster\Models\ShopsterProduct;
+
+class DummyClass extends ShopsterProduct
+{
+    public $guarded = [];
+}

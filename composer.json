@@ -1,0 +1,45 @@
+{
+  "name": "iperson1337/shopster",
+  "description": "Laravel package for e-commerce projects",
+  "type": "library",
+  "version": "1.0.0",
+  "keywords": [
+    "e-commerce",
+    "laravel",
+    "shopster",
+    "shopping",
+    "shopping cart",
+    "php"
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "darryldecode/cart": "^4.2"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "iPERSON1337",
+      "email": "mukat_alibi@mail.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Shopster\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Shopster\\Tests\\": "./tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Shopster\\ShopsterServiceProvider"
+      ],
+      "aliases": {
+        "Shopster": "Shopster\\ShopsterFacade"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Shopster\Models\ShopsterAttributeGroup;
+
+class DummyClass extends ShopsterAttributeGroup
+{
+    public $guarded = [];
+}
