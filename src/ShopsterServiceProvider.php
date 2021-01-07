@@ -15,6 +15,8 @@ class ShopsterServiceProvider extends ServiceProvider
   {
     $this->publishConfiguration();
     $this->publishMigrations();
+
+    $this->loadViewsFrom(__DIR__.'/../resources/views', 'iperson1337/shopster');
   }
 
   /**
@@ -93,6 +95,7 @@ class ShopsterServiceProvider extends ServiceProvider
         Console\MakeAttributeGroupCommand::class,
         Console\MakeAttributeCommand::class,
         Console\MakeAttributeValueCommand::class,
+        Console\MakeCartControllerCommand::class,
       ]);
     }
   }

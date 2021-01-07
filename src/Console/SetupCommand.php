@@ -30,7 +30,8 @@ class SetupCommand extends Command
         'shopster:product' => 'Creating Product model',
         'shopster:attribute_group' => 'Creating AttributeGroup model',
         'shopster:attribute' => 'Creating Attribute model',
-        'shopster:attribute_value' => 'Creating AttributeValue model'
+        'shopster:attribute_value' => 'Creating AttributeValue model',
+        'shopster:cart-controller' => 'Creating CartController',
     ];
 
     /**
