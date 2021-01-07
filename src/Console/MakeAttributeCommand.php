@@ -58,7 +58,7 @@ class MakeAttributeCommand extends GeneratorCommand
    */
   protected function getDefaultNamespace($rootNamespace)
   {
-    return $rootNamespace;
+    return $rootNamespace.'\Models';
   }
 
   /**
