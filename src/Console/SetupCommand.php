@@ -27,6 +27,7 @@ class SetupCommand extends Command
      * @var array
      */
     protected $calls = [
+        'shopster:brand' => 'Creating Brand model',
         'shopster:product' => 'Creating Product model',
         'shopster:attribute_group' => 'Creating AttributeGroup model',
         'shopster:attribute' => 'Creating Attribute model',
