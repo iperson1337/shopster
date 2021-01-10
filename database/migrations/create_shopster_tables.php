@@ -31,6 +31,7 @@ class CreateShopsterTables extends Migration
             $table->bigInteger('price')->default(0);
             $table->bigInteger('old_price')->default(0);
             $table->foreignId('brand_id')
+                  ->nullable()
                   ->constrained(Config::get('shopster.tables.brands'))
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
