@@ -14,6 +14,14 @@ class CreateShopsterTables extends Migration
      */
     public function up()
     {
+        Schema::create(Config::get('shopster.tables.brands'), function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('description')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create(Config::get('shopster.tables.products'), function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -22,6 +30,10 @@ class CreateShopsterTables extends Migration
             $table->text('description')->nullable();
             $table->bigInteger('price')->default(0);
             $table->bigInteger('old_price')->default(0);
+            $table->foreignId('brand_id')
+                  ->constrained(Config::get('shopster.tables.brands'))
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
             $table->timestamps();
         });
 
